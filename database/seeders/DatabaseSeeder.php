@@ -34,7 +34,15 @@ class DatabaseSeeder extends Seeder
                 'jabatan' => '',
                 'password' => bcrypt('123456'),
                 'role' => 'siswa'
-            ]
+            ],
+            [
+                'nama' => 'Dean Dwiar Fahrezi',
+                'username' => 'user-12345679',
+                'email' => 'deandwiar@gmail.com',
+                'jabatan' => '',
+                'password' => bcrypt('123456'),
+                'role' => 'siswa'
+            ],
 
         ];
         foreach ($dataUser as $user) {
@@ -47,7 +55,13 @@ class DatabaseSeeder extends Seeder
                 'nis' => '12345678',
                 'kelas' => '12 RPL',
                 'jurusan' => 'PPLG',
-            ]
+            ],
+            [
+                'user_id' => 3,
+                'nis' => '12345679',
+                'kelas' => '12 RPL',
+                'jurusan' => 'PPLG',
+            ],
         ];
         
         foreach ($dataSiswa as $siswa) {
@@ -100,11 +114,11 @@ class DatabaseSeeder extends Seeder
                 'status' => 'diproses',
             ],
             [
-                'siswa_id' => 1,
+                'siswa_id' => 2,
                 'kategori_id' => 2,
                 'judul' => 'Toilet Mampet',
                 'isi' => 'Mohon di cek, toilet perempuan di kamar mandi/toilet 2, saluran pembuangannya mampet',
-                'status' => 'selesai',
+                'status' => 'menunggu',
             ],
         ];
 

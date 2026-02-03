@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard Siswa</title>
-    <link rel="stylesheet" href="/css/dashboard.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-</head>
-<body>
+@extends('siswa.layouts.templates')
 
-<div class="container">
-
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li class="active"><i class="fa fa-house"></i> Dashboard</li>
-            <li><i class="fa fa-message"></i> Aspirasi</li>
-            <li><i class="fa fa-user"></i> Profil</li>
-        </ul>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div class="main">
+@section('content')
+     <div class="main">
 
         <!-- TOPBAR -->
         <div class="topbar">
@@ -48,7 +28,6 @@
                         </button>
                 </form>
                 </div>
-
             </div>
          </div>
         <h2 style="text-align: center; color: #333E5D; margin-bottom: 20px;">Selamat Datang
@@ -75,7 +54,7 @@
         </div>
 
         <!-- BUTTON -->
-        <button class="btn">+ Ajukan Aspirasi</button>
+        <a href="{{ route('siswa.tambah-aspirasi') }}" class="btn-aspirasi">+ Ajukan Aspirasi</a>
 
         <!-- TABLE -->
         <div class="table-box">
@@ -104,14 +83,5 @@
                 </tbody>
             </table>
         </div>
-
     </div>
-</div>
-    <script>
-function toggleDropdown() {
-    const dropdown = document.getElementById("userDropdown");
-    dropdown.classList.toggle("show");
-}
-</script>
-</body>
-</html>
+@endsection
